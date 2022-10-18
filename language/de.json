@@ -31,7 +31,8 @@
               "label": "Links vom Inhalt"
             }
           ]
-        }
+        },
+        {}
       ]
     },
     {
@@ -40,6 +41,10 @@
         {
           "label": "Karteireiter",
           "default": "Karteireiter"
+        },
+        {
+          "label": "Kein Inhalt",
+          "default": "Es gibt keinen Inhalt zum Anzeigen."
         }
       ]
     },
@@ -50,7 +55,8 @@
           "label": "Wähle einen Karteireiter",
           "description": "Vorlesewerkzeug-Beschreibung.",
           "default": "Wähle einen Karteireiter."
-        }
+        },
+        {}
       ]
     }
   ]

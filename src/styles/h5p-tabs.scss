@@ -9,6 +9,16 @@
     display: flex;
     flex-direction: column;
 
+    &.h5p-tabs-message {
+      background-color: $color-hint-message-background;
+      border: 1px solid $color-hint-message-border;
+      box-sizing: border-box;
+      color: $color-hint-message-text;
+      margin: 0;
+      padding: .8em;
+      text-align: center;
+    }
+
     .h5p-tabs-tabs-label {
       position: absolute;
       left: $offset-offscreen;

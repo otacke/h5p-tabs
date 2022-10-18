@@ -72,9 +72,10 @@
         "default": "tab"
       },
       {
-        "name": "dummy",
+        "name": "noContent",
         "type": "text",
-        "widget": "none"
+        "label": "No content",
+        "default": "There is no content to be displayed."
       }
     ]
   },

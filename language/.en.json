@@ -31,7 +31,8 @@
               "label": "Left of content"
             }
           ]
-        }
+        },
+        {}
       ]
     },
     {
@@ -40,6 +41,10 @@
         {
           "label": "Tab",
           "default": "tab"
+        },
+        {
+          "label": "No content",
+          "default": "There is no content to be displayed."
         }
       ]
     },
@@ -50,7 +55,8 @@
           "label": "Choose a tab",
           "description": "Text for screenreaders.",
           "default": "Choose a tab."
-        }
+        },
+        {}
       ]
     }
   ]

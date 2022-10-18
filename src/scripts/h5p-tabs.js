@@ -21,7 +21,8 @@ export default class Tabs extends H5P.EventDispatcher {
         alignment: 'dynamic'
       },
       l10n: {
-        tab: 'tab'
+        tab: 'tab',
+        noContent: 'There is no content to be displayed.'
       },
       a11y: {
         tabList: 'Choose a tab.'
@@ -137,6 +138,12 @@ export default class Tabs extends H5P.EventDispatcher {
   buildDOM() {
     const dom = document.createElement('div');
     dom.classList.add('h5p-tabs-container');
+
+    if (!this.tabs.length) {
+      dom.classList.add('h5p-tabs-message');
+      dom.innerHTML = Dictionary.get('l10n.noContent');
+      return dom;
+    }
 
     const labelUUID = H5P.createUUID();
     const label = document.createElement('div');
