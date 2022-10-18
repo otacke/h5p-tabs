@@ -1,0 +1,101 @@
+[
+  {
+    "name": "tabs",
+    "type": "list",
+    "label": "Tabs",
+    "entity": "tab",
+    "max": 100,
+    "min": 1,
+    "widgets": [
+      {
+        "name": "VerticalTabs",
+        "label": "Default"
+      }
+    ],
+    "field": {
+      "name": "content",
+      "type": "library",
+      "label": "Content",
+      "importance": "medium",
+      "entity": "content",
+      "options": [
+        "H5P.Column 1.13"
+      ],
+      "widget": "editorTabs"
+    }
+  },
+  {
+    "name": "behaviour",
+    "type": "group",
+    "label": "Behavioural settings",
+    "importance": "low",
+    "description": "These options will let you control how the task behaves.",
+    "fields": [
+      {
+        "name": "alignment",
+        "type": "select",
+        "label": "Alignment",
+        "description": "Choose where the tabs will be placed.",
+        "options": [
+          {
+            "label": "Based on screen size",
+            "value": "dynamic"
+          },
+          {
+            "label": "On top of content",
+            "value": "top"
+          },
+          {
+            "label": "Left of content",
+            "value": "left"
+          }
+        ],
+        "default": "dynamic"
+      },
+      {
+        "name": "dummy",
+        "type": "boolean",
+        "widget": "none"
+      }
+    ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "label": "User interface",
+    "common": true,
+    "fields": [
+      {
+        "name": "tab",
+        "type": "text",
+        "label": "Tab",
+        "default": "tab"
+      },
+      {
+        "name": "dummy",
+        "type": "text",
+        "widget": "none"
+      }
+    ]
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "label": "Accessibility texts",
+    "common": true,
+    "fields": [
+      {
+        "name": "tabLsist",
+        "type": "text",
+        "label": "Choose a tab",
+        "description": "Text for screenreaders.",
+        "default": "Choose a tab."
+      },
+      {
+        "name": "dummy",
+        "type": "text",
+        "widget": "none"
+      }
+    ]
+  }
+]

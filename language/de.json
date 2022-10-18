@@ -1,0 +1,57 @@
+{
+  "semantics": [
+    {
+      "label": "Karteireiter",
+      "entity": "Karteireiter",
+      "widgets": [
+        {
+          "label": "Eingabemaske"
+        }
+      ],
+      "field": {
+        "label": "Inhalt",
+        "entity": "Inhalt"
+      }
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "description": "Diese Optionen kontrollieren, wie sich die Aufgabe verhält.",
+      "fields": [
+        {
+          "label": "Positionierung",
+          "description": "Wähle, wo die Karteireiter positioniert werden.",
+          "options": [
+            {
+              "label": "Je nach Bildschirmgröße"
+            },
+            {
+              "label": "Oberhalb des Inhalts"
+            },
+            {
+              "label": "Links vom Inhalt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Bezeichnungen und Beschriftungen",
+      "fields": [
+        {
+          "label": "Karteireiter",
+          "default": "Karteireiter"
+        }
+      ]
+    },
+    {
+      "label": "Vorlesewerkzeug",
+      "fields": [
+        {
+          "label": "Wähle einen Karteireiter",
+          "description": "Vorlesewerkzeug-Beschreibung.",
+          "default": "Wähle einen Karteireiter."
+        }
+      ]
+    }
+  ]
+}

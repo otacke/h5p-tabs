@@ -1,0 +1,57 @@
+{
+  "semantics": [
+    {
+      "label": "Tabs",
+      "entity": "tab",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "field": {
+        "label": "Content",
+        "entity": "content"
+      }
+    },
+    {
+      "label": "Behavioural settings",
+      "description": "These options will let you control how the task behaves.",
+      "fields": [
+        {
+          "label": "Alignment",
+          "description": "Choose where the tabs will be placed.",
+          "options": [
+            {
+              "label": "Based on screen size"
+            },
+            {
+              "label": "On top of content"
+            },
+            {
+              "label": "Left of content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "User interface",
+      "fields": [
+        {
+          "label": "Tab",
+          "default": "tab"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Choose a tab",
+          "description": "Text for screenreaders.",
+          "default": "Choose a tab."
+        }
+      ]
+    }
+  ]
+}
