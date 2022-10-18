@@ -30,11 +30,11 @@
   }
 
   &:first-child {
-    border-radius: 1em 0 0 0;
+    border-top-left-radius: 1em;
   }
 
   &:last-child {
-    border-radius: 0 1em 0 0;
+    border-top-right-radius: 1em;
   }
 
   &:not(:last-child) {

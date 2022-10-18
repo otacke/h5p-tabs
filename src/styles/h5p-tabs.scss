@@ -56,7 +56,8 @@
         }
 
         &:last-child {
-          border-radius: 0 0 0 1em;
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 1em;
         }
       }
     }
@@ -84,7 +85,8 @@
           }
 
           &:last-child {
-            border-radius: 0 0 0 1em;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 1em;
           }
         }
       }
