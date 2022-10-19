@@ -18,7 +18,7 @@ export default class Tabs extends H5P.EventDispatcher {
     this.params = Util.extend({
       tabs: [],
       behaviour: {
-        alignment: 'dynamic'
+        tabPlacement: 'dynamic'
       },
       l10n: {
         tab: 'tab',
@@ -69,7 +69,7 @@ export default class Tabs extends H5P.EventDispatcher {
     const wrapper = $wrapper.get(0);
 
     wrapper.classList.add('h5p-tabs');
-    wrapper.classList.add(`alignment-${this.params.behaviour.alignment}`);
+    wrapper.classList.add(`tab-placement-${this.params.behaviour.tabPlacement}`);
     wrapper.appendChild(this.dom);
 
     if (this.isRoot()) {

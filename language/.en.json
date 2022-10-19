@@ -18,7 +18,7 @@
       "description": "These options will let you control how the task behaves.",
       "fields": [
         {
-          "label": "Alignment",
+          "label": "Tab placement",
           "description": "Choose where the tabs will be placed.",
           "options": [
             {

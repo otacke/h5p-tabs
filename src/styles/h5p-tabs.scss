@@ -36,7 +36,7 @@
   }
 }
 
-.h5p-tabs.alignment-left {
+.h5p-tabs.tab-placement-left {
   .h5p-tabs-container {
     flex-direction: row;
 
@@ -65,7 +65,7 @@
 }
 
 @media (max-width: 480px) {
-  .h5p-tabs.alignment-dynamic {
+  .h5p-tabs.tab-placement-dynamic {
     .h5p-tabs-container {
       flex-direction: row;
 
