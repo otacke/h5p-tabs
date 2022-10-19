@@ -34,7 +34,7 @@
         },
         {
           "label": "Verteilung der Karteireiter",
-          "description": "Lege fest, welcher Prozentsatz der Fläche der Leiste mit den Karteireitern von den Karteireitern genutzt werden kann."
+          "description": "Lege fest, welcher Prozentsatz der Fläche der Leiste mit den Karteireitern von den Karteireitern genutzt werden kann. Bitte beachte aber, dass diese Einstellung ignoriert wird, wenn zu viele Tabs erstellt wurden und sie nicht innerhalb des Limits dargestellt werden können."
         }
       ]
     },
