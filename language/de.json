@@ -32,7 +32,10 @@
             }
           ]
         },
-        {}
+        {
+          "label": "Verteilung der Karteireiter",
+          "description": "Lege fest, welcher Prozentsatz der Fläche der Leiste mit den Karteireitern von den Karteireitern genutzt werden kann."
+        }
       ]
     },
     {

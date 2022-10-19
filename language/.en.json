@@ -32,7 +32,10 @@
             }
           ]
         },
-        {}
+        {
+          "label": "Tab spread",
+          "description": "Define what percentage of the tab panel's horizontal space can be used for tabs."
+        }
       ]
     },
     {

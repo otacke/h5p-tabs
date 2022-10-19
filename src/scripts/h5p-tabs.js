@@ -18,7 +18,8 @@ export default class Tabs extends H5P.EventDispatcher {
     this.params = Util.extend({
       tabs: [],
       behaviour: {
-        tabPlacement: 'dynamic'
+        tabPlacement: 'dynamic',
+        tabSpread: 70,
       },
       l10n: {
         tab: 'tab',
@@ -49,6 +50,8 @@ export default class Tabs extends H5P.EventDispatcher {
     const defaultLanguage = extras?.metadata?.defaultLanguage || 'en';
     this.languageTag = Util.formatLanguageCode(defaultLanguage);
 
+    this.contentUUID = H5P.createUUID();
+
     this.tabs = [];
     this.contents = [];
 
@@ -56,6 +59,8 @@ export default class Tabs extends H5P.EventDispatcher {
     this.focusTab = this.activeTab;
 
     this.createContent();
+
+    this.setCustomCSS();
 
     this.dom = this.buildDOM();
   }
@@ -70,6 +75,7 @@ export default class Tabs extends H5P.EventDispatcher {
 
     wrapper.classList.add('h5p-tabs');
     wrapper.classList.add(`tab-placement-${this.params.behaviour.tabPlacement}`);
+    wrapper.setAttribute('id', this.contentUUID);
     wrapper.appendChild(this.dom);
 
     if (this.isRoot()) {
@@ -173,6 +179,22 @@ export default class Tabs extends H5P.EventDispatcher {
     dom.appendChild(contents);
 
     return dom;
+  }
+
+  /**
+   * Set custom CSS.
+   */
+  setCustomCSS() {
+    const css = `.h5p-tabs[id=${this.contentUUID}]{--tab-spread: ${this.params.behaviour.tabSpread}%};`;
+
+    const style = document.createElement('style');
+    if (style.styleSheet) {
+      style.styleSheet.cssText = css;
+    }
+    else {
+      style.appendChild(document.createTextNode(css));
+    }
+    document.head.appendChild(style);
   }
 
   /**
