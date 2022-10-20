@@ -59,9 +59,9 @@ export default class Tabs extends H5P.EventDispatcher {
     this.activeTab = this.previousState.activeTab;
     this.focusTab = this.activeTab;
 
-    this.createContent();
-
     this.setCustomCSS();
+
+    this.createContent();
 
     this.dom = this.buildDOM();
   }
