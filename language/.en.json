@@ -34,7 +34,11 @@
         },
         {
           "label": "Tab spread",
-          "description": "Define what percentage of the tab panel's horizontal space will be used for tabs initially. Please note that tabs will use all space if there are too many tabs and they cannot be displayed within your limit.",
+          "description": "Define what percentage of the tab panel's horizontal space will be used for tabs initially. Please note that tabs will use all space if there are too many tabs and they cannot be displayed within your limit."
+        },
+        {
+          "label": "Background color",
+          "description": "Allows you to adjust the background color so the tabs may blend into your environment."
         }
       ]
     },
@@ -58,8 +62,7 @@
           "label": "Choose a tab",
           "description": "Text for screenreaders.",
           "default": "Choose a tab."
-        },
-        {}
+        }
       ]
     }
   ]

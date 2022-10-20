@@ -20,6 +20,7 @@ export default class Tabs extends H5P.EventDispatcher {
       behaviour: {
         tabPlacement: 'dynamic',
         tabSpread: 70,
+        colorBackground: 'rgba(255, 255, 255, 0)'
       },
       l10n: {
         tab: 'tab',
@@ -185,7 +186,10 @@ export default class Tabs extends H5P.EventDispatcher {
    * Set custom CSS.
    */
   setCustomCSS() {
-    const css = `.h5p-tabs[id=${this.contentUUID}]{--tab-spread: ${this.params.behaviour.tabSpread}%};`;
+    const css = `.h5p-tabs[id=${this.contentUUID}]{\
+      --color-background: ${this.params.behaviour.colorBackground};\
+      --tab-spread: ${this.params.behaviour.tabSpread}%;\
+    }`;
 
     const style = document.createElement('style');
     if (style.styleSheet) {

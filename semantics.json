@@ -60,6 +60,21 @@
         "default": 70,
         "min": 50,
         "max": 100
+      },
+      {
+        "name": "colorBackground",
+        "type": "text",
+        "label": "Background color",
+        "description": "Allows you to adjust the background color so the tabs may blend into your environment.",
+        "importance": "medium",
+        "optional": true,
+        "default": "rgba(255, 255, 255, 0)",
+        "widget": "colorSelector",
+        "spectrum": {
+          "showInput": true,
+          "showInitial": true,
+          "showAlpha": true
+        }
       }
     ]
   },
