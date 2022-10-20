@@ -186,7 +186,7 @@ export default class Tabs extends H5P.EventDispatcher {
    * Set custom CSS.
    */
   setCustomCSS() {
-    const css = `.h5p-tabs[id=${this.contentUUID}]{\
+    const css = `.h5p-tabs[id="${this.contentUUID}"]{\
       --color-background: ${this.params.behaviour.colorBackground};\
       --tab-spread: ${this.params.behaviour.tabSpread}%;\
     }`;
