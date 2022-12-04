@@ -37,8 +37,14 @@
           "description": "Define what percentage of the tab panel's horizontal space will be used for tabs."
         },
         {
+          "label": "Tab color",
+          "description": "Allows you to adjust the color of tabs.",
+          "default": "#1a73d9"
+        },
+        {
           "label": "Background color",
-          "description": "Allows you to adjust the background color so the tabs may blend into your environment."
+          "description": "Allows you to adjust the background color so the tabs may blend into your environment.",
+          "default": "rgba(255, 255, 255, 0)"
         }
       ]
     },
@@ -62,7 +68,8 @@
           "label": "Choose a tab",
           "description": "Text for screenreaders.",
           "default": "Choose a tab."
-        }
+        },
+        {}
       ]
     }
   ]

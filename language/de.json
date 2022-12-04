@@ -37,6 +37,11 @@
           "description": "Lege fest, welcher Prozentsatz der Fläche der Leiste mit den Karteireitern von den Karteireitern genutzt wird."
         },
         {
+          "label": "Tab-Farbe",
+          "description": "Erlaubt es dir, die Farbe der Tabs anzupassen",
+          "default": "#1a73d9"
+        },
+        {
           "label": "Hintergrundfarbe",
           "description": "Erlaubt es dir, die Hintergrundfarbe so anzupassen, dass die Tabs sich in die Umgebung einpassen.",
           "default": "rgba(255, 255, 255, 0)"

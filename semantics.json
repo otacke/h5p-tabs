@@ -62,6 +62,21 @@
         "max": 100
       },
       {
+        "name": "colorBase",
+        "type": "text",
+        "label": "Tab color",
+        "description": "Allows you to adjust the color of tabs.",
+        "importance": "medium",
+        "optional": true,
+        "default": "#1a73d9",
+        "widget": "colorSelector",
+        "spectrum": {
+          "showInput": true,
+          "showInitial": true,
+          "showAlpha": true
+        }
+      },
+      {
         "name": "colorBackground",
         "type": "text",
         "label": "Background color",

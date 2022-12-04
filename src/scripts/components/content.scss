@@ -1,7 +1,7 @@
 @import "./../../styles/main";
 
 .h5p-tabs-content-container {
-  border: solid 1px #cfdff0;
+  border: solid 1px var(--color-tab-background, $color-content);
   box-sizing: border-box;
   height: 100%;
   width: 100%;
