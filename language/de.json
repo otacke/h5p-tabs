@@ -38,7 +38,7 @@
         },
         {
           "label": "Tab-Farbe",
-          "description": "Erlaubt es dir, die Farbe der Tabs anzupassen",
+          "description": "Erlaubt es dir, die Farbe der Tabs anzupassen.",
           "default": "#1a73d9"
         },
         {
@@ -68,8 +68,7 @@
           "label": "Wähle einen Karteireiter",
           "description": "Vorlesewerkzeug-Beschreibung.",
           "default": "Wähle einen Karteireiter."
-        },
-        {}
+        }
       ]
     }
   ]
