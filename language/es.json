@@ -5,7 +5,7 @@
       "entity": "pestaña",
       "widgets": [
         {
-          "label": "Por defecto"
+          "label": "Predeterminado"
         }
       ],
       "field": {
@@ -45,7 +45,7 @@
           "default": "rgba(255, 255, 255, 0)"
         }
       ],
-      "label": "Configuración del comportamiento",
+      "label": "Configuraciones del comportamiento",
       "description": "Estas opciones te permitirán controlar cómo se comporta la tarea."
     },
     {
