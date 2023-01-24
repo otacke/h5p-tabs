@@ -17,7 +17,7 @@
       "fields": [
         {
           "label": "Ubicación de la pestaña",
-          "description": "Elige dónde se colocarán las pestañas.",
+          "description": "Elegir dónde se colocarán las pestañas.",
           "options": [
             {
               "label": "Basado en el tamaño de la pantalla"
@@ -65,9 +65,9 @@
       "label": "Textos de accesibilidad",
       "fields": [
         {
-          "label": "Elige una pestaña",
+          "label": "Elegir una pestaña",
           "description": "Texto para lectores de pantalla.",
-          "default": "Elige una pestaña."
+          "default": "Elegir una pestaña."
         }
       ]
     }
