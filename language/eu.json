@@ -68,7 +68,8 @@
           "label": "Choose a tab",
           "description": "Text for screenreaders.",
           "default": "Choose a tab."
-        }
+        },
+        {}
       ]
     }
   ]

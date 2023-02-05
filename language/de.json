@@ -68,7 +68,8 @@
           "label": "Wähle einen Karteireiter",
           "description": "Vorlesewerkzeug-Beschreibung.",
           "default": "Wähle einen Karteireiter."
-        }
+        },
+        {}
       ]
     }
   ]
