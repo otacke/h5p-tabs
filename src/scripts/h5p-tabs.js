@@ -108,12 +108,19 @@ export default class Tabs extends H5P.EventDispatcher {
       .map((tabParams, index) => {
         const uuid = H5P.createUUID();
 
-        const content = new Content({
-          content: tabParams,
-          contentId: this.contentId,
-          uuid: uuid,
-          previousState: this.previousState.contents[index]
-        });
+        const content = new Content(
+          {
+            content: tabParams,
+            contentId: this.contentId,
+            uuid: uuid,
+            previousState: this.previousState.contents[index]
+          },
+          {
+            resize: () => {
+              this.trigger('resize');
+            }
+          }
+        );
 
         content.setDoneState(
           this.previousState.doneTabs[index] ||
