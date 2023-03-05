@@ -4,9 +4,14 @@ export default class Content {
   /**
    * @class
    * @param {object} [params={}] Parameters.
+   * @param {object} [callbacks={}] Callbacks.
+   * @param {function} [callbacks.resize] Resize callback.
    */
-  constructor(params = {}) {
+  constructor(params = {}, callbacks = {}) {
     this.params = params;
+
+    this.callbacks = callbacks || {};
+    this.callbacks.resize = this.callbacks.resize || (() => {});
 
     this.dom = document.createElement('div');
     this.dom.classList.add('h5p-tabs-content-container');
@@ -14,18 +19,46 @@ export default class Content {
     this.dom.setAttribute('role', 'tabpanel');
     this.dom.setAttribute('aria-labelledby', `h5p-tabs-tab-${this.params.uuid}`);
 
-    const content = document.createElement('div');
-    content.classList.add('h5p-tabs-tab-content');
+    this.content = document.createElement('div');
+    this.content.classList.add('h5p-tabs-tab-content');
 
     this.instance = H5P.newRunnable(
       this.params.content,
       this.params.contentId,
-      H5P.jQuery(content),
-      false,
+      undefined, // must attach later
+      true,
       { previousState: this.params.previousState }
     );
 
-    this.dom.appendChild(content);
+    this.dom.appendChild(this.content);
+
+    /*
+     * Some of Tabs subcontents may require to be attached to the page's
+     * `document` before being attached to a container.
+     * If observer is started immediately, it may depend on timing whether it
+     * actually fires when target is visible. Waiting for next animation frame
+     * helps but can fail when content is embedded.
+     */
+    const initCallback = window.requestIdleCallback ?
+      window.requestIdleCallback :
+      window.requestAnimationFrame;
+
+    initCallback(() => {
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          observer.disconnect(); // Not needed anymore
+
+          this.attach();
+
+          window.requestAnimationFrame(() => {
+            this.callbacks.resize();
+          });
+        }
+      }, {
+        threshold: 0.01
+      });
+      observer.observe(this.dom);
+    });
   }
 
   /**
@@ -35,6 +68,13 @@ export default class Content {
    */
   getDOM() {
     return this.dom;
+  }
+
+  /**
+   * Attach content to document.
+   */
+  attach() {
+    this.instance?.attach(H5P.jQuery(this.content));
   }
 
   /**
