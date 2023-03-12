@@ -74,7 +74,21 @@ export default class Content {
    * Attach content to document.
    */
   attach() {
-    this.instance?.attach(H5P.jQuery(this.content));
+    if (typeof this.instance?.attach !== 'function') {
+      return;
+    }
+
+    this.instance.attach(H5P.jQuery(this.content));
+    this.isInstanceAttached = true;
+  }
+
+  /**
+   * Determine whether instance was attached already.
+   *
+   * @returns {boolean} True if instance is attached.
+   */
+  isAttached() {
+    return this.isInstanceAttached;
   }
 
   /**

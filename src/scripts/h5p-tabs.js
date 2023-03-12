@@ -134,7 +134,11 @@ export default class Tabs extends H5P.EventDispatcher {
         this.contents.push(content);
 
         // Resize instance to fit inside parent and vice versa
-        this.bubbleDown(this, 'resize', [content.getInstance()]);
+        this.bubbleDown(
+          this,
+          'resize',
+          content.isAttached() ? [content.getInstance()] : []
+        );
         this.bubbleUp(content.getInstance(), 'resize', this);
 
         const tab = new Tab(
