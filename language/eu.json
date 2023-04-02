@@ -1,73 +1,73 @@
 {
   "semantics": [
     {
-      "label": "Tabs",
-      "entity": "tab",
+      "label": "Fitxak",
+      "entity": "Fitxa",
       "widgets": [
         {
-          "label": "Default"
+          "label": "Lehenetsia"
         }
       ],
       "field": {
-        "label": "Content",
-        "entity": "content"
+        "label": "Edukia",
+        "entity": "edukia"
       }
     },
     {
-      "label": "Behavioural settings",
-      "description": "These options will let you control how the task behaves.",
+      "label": "Jokabide-ezarpenak",
+      "description": "Aukera hauek zereginaren portaera kontrolatzeko aukera emango dizute.",
       "fields": [
         {
-          "label": "Tab placement",
-          "description": "Choose where the tabs will be placed.",
+          "label": "Fitxen kokapena",
+          "description": "Aukeratu fitxak non kokatuko diren.",
           "options": [
             {
-              "label": "Based on screen size"
+              "label": "Pantailaren tamainan oinarrituta"
             },
             {
-              "label": "On top of content"
+              "label": "Edukiaren gainean"
             },
             {
-              "label": "Left of content"
+              "label": "Edukiaren ezkerrean"
             }
           ]
         },
         {
-          "label": "Tab spread",
-          "description": "Define what percentage of the tab panel's horizontal space will be used for tabs."
+          "label": "Fitxen banaketa",
+          "description": "Zehaztu fitxen paneleko espazio horizontalaren zein ehuneko erabiliko den fitxetarako."
         },
         {
-          "label": "Background color",
-          "description": "Allows you to adjust the background color so the tabs may blend into your environment.",
+          "label": "Fitxen kolorea",
+          "description": "Fitxen kolorea doitzeko aukera ematen du.",
           "default": "#1a73d9"
         },
         {
-          "label": "Background color",
-          "description": "Allows you to adjust the background color so the tabs may blend into your environment.",
+          "label": "Atzeko planoaren kolorea",
+          "description": "Atzeko planoaren kolorea doitzeko aukera ematen du, fitxak zure ingurunean nahas daitezen.",
           "default": "rgba(255, 255, 255, 0)"
         }
       ]
     },
     {
-      "label": "User interface",
+      "label": "Erabiltzaile interfazea",
       "fields": [
         {
-          "label": "Tab",
-          "default": "tab"
+          "label": "Fitxa",
+          "default": "fitxa"
         },
         {
-          "label": "No content",
-          "default": "There is no content to be displayed."
+          "label": "Edukirik ez",
+          "default": "Ez dago bistaratu beharreko edukirik."
         }
       ]
     },
     {
-      "label": "Accessibility texts",
+      "label": "Irisgarritasun testuak",
       "fields": [
         {
-          "label": "Choose a tab",
-          "description": "Text for screenreaders.",
-          "default": "Choose a tab."
+          "label": "Aukeratu fitxa bat",
+          "description": "Pantaila irakurleentzako testua.",
+          "default": "Aukeratu fitxa bat."
         },
         {}
       ]
