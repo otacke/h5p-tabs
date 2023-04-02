@@ -68,7 +68,8 @@
           "label": "Aukeratu fitxa bat",
           "description": "Pantaila irakurleentzako testua.",
           "default": "Aukeratu fitxa bat."
-        }
+        },
+        {}
       ]
     }
   ]
