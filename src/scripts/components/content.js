@@ -5,30 +5,24 @@ export default class Content {
    * @class
    * @param {object} [params={}] Parameters.
    * @param {object} [callbacks={}] Callbacks.
-   * @param {function} [callbacks.resize] Resize callback.
+   * @param {function} [callbacks.onInstantiated] On instantiated callback.
    */
   constructor(params = {}, callbacks = {}) {
     this.params = params;
 
     this.callbacks = callbacks || {};
-    this.callbacks.resize = this.callbacks.resize || (() => {});
+    this.callbacks.onInstantiated = this.callbacks.onInstantiated || (() => {});
 
     this.dom = document.createElement('div');
     this.dom.classList.add('h5p-tabs-content-container');
     this.dom.setAttribute('id', `h5p-tabs-tabpanel-${this.params.uuid}`);
     this.dom.setAttribute('role', 'tabpanel');
-    this.dom.setAttribute('aria-labelledby', `h5p-tabs-tab-${this.params.uuid}`);
+    this.dom.setAttribute(
+      'aria-labelledby', `h5p-tabs-tab-${this.params.uuid}`
+    );
 
     this.content = document.createElement('div');
     this.content.classList.add('h5p-tabs-tab-content');
-
-    this.instance = H5P.newRunnable(
-      this.params.content,
-      this.params.contentId,
-      undefined, // must attach later
-      true,
-      { previousState: this.params.previousState }
-    );
 
     this.dom.appendChild(this.content);
 
@@ -48,11 +42,15 @@ export default class Content {
         if (entries[0].isIntersecting) {
           observer.disconnect(); // Not needed anymore
 
-          this.attach();
+          this.instance = H5P.newRunnable(
+            this.params.content,
+            this.params.contentId,
+            H5P.jQuery(this.content),
+            false,
+            { previousState: this.params.previousState }
+          );
 
-          window.requestAnimationFrame(() => {
-            this.callbacks.resize();
-          });
+          this.callbacks.onInstantiated();
         }
       }, {
         threshold: 0.01
@@ -68,27 +66,6 @@ export default class Content {
    */
   getDOM() {
     return this.dom;
-  }
-
-  /**
-   * Attach content to document.
-   */
-  attach() {
-    if (typeof this.instance?.attach !== 'function') {
-      return;
-    }
-
-    this.instance.attach(H5P.jQuery(this.content));
-    this.isInstanceAttached = true;
-  }
-
-  /**
-   * Determine whether instance was attached already.
-   *
-   * @returns {boolean} True if instance is attached.
-   */
-  isAttached() {
-    return this.isInstanceAttached;
   }
 
   /**

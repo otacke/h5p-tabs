@@ -116,30 +116,33 @@ export default class Tabs extends H5P.EventDispatcher {
             previousState: this.previousState.contents[index]
           },
           {
-            resize: () => {
-              this.trigger('resize');
+            onInstantiated: () => {
+              content.setDoneState(
+                this.previousState.doneTabs[index] ||
+                content.getInstance().getMaxScore() === 0
+              );
+
+              content.getInstance().on('xAPI', (event) => {
+                this.trackScoring(event, index);
+              });
+
+              // Resize instance to fit inside parent and vice versa
+              this.bubbleDown(
+                this,
+                'resize',
+                [content.getInstance()]
+              );
+
+              this.bubbleUp(content.getInstance(), 'resize', this);
+
+              window.requestAnimationFrame(() => {
+                this.trigger('resize');
+              });
             }
           }
         );
 
-        content.setDoneState(
-          this.previousState.doneTabs[index] ||
-          content.getInstance().getMaxScore() === 0
-        );
-
-        content.getInstance().on('xAPI', (event) => {
-          this.trackScoring(event, index);
-        });
-
         this.contents.push(content);
-
-        // Resize instance to fit inside parent and vice versa
-        this.bubbleDown(
-          this,
-          'resize',
-          content.isAttached() ? [content.getInstance()] : []
-        );
-        this.bubbleUp(content.getInstance(), 'resize', this);
 
         const tab = new Tab(
           {
