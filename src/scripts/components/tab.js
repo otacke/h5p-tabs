@@ -1,4 +1,4 @@
-import Util from './../services/util';
+import Util from '@services/util';
 import './tab.scss';
 
 export default class Tab {

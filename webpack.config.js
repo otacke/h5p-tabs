@@ -7,6 +7,14 @@ const libraryName = process.env.npm_package_name;
 
 module.exports = {
   mode: nodeEnv,
+  resolve: {
+    alias: {
+      '@components': path.resolve(__dirname, 'src/scripts/components'),
+      '@scripts': path.resolve(__dirname, 'src/scripts'),
+      '@services': path.resolve(__dirname, 'src/scripts/services'),
+      '@styles': path.resolve(__dirname, 'src/styles')
+    }
+  },
   optimization: {
     minimize: nodeEnv === 'production',
     minimizer: [

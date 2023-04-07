@@ -1,3 +1,4 @@
+import Util from '@services/util';
 import './content.scss';
 
 export default class Content {
@@ -10,8 +11,9 @@ export default class Content {
   constructor(params = {}, callbacks = {}) {
     this.params = params;
 
-    this.callbacks = callbacks || {};
-    this.callbacks.onInstantiated = this.callbacks.onInstantiated || (() => {});
+    this.callbacks = Util.extend({
+      onInstantiated: () => {}
+    }, callbacks);
 
     this.dom = document.createElement('div');
     this.dom.classList.add('h5p-tabs-content-container');
