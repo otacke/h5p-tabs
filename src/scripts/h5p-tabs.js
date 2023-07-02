@@ -37,7 +37,8 @@ export default class Tabs extends H5P.EventDispatcher {
     this.extras = extras;
 
     // Fill dictionary
-    Dictionary.fill({ l10n: this.params.l10n, a11y: this.params.a11y });
+    this.dictionary = new Dictionary();
+    this.dictionary.fill({ l10n: this.params.l10n, a11y: this.params.a11y });
 
     // Apply dynamic color values
     Colors.setBase(this.params.behaviour.colorBase);
@@ -173,7 +174,7 @@ export default class Tabs extends H5P.EventDispatcher {
 
     if (!this.tabs.length) {
       dom.classList.add('h5p-tabs-message');
-      dom.innerHTML = Dictionary.get('l10n.noContent');
+      dom.innerHTML = this.dictionary.get('l10n.noContent');
       return dom;
     }
 
@@ -181,7 +182,7 @@ export default class Tabs extends H5P.EventDispatcher {
     const label = document.createElement('div');
     label.classList.add('h5p-tabs-tabs-label');
     label.setAttribute('id', labelUUID);
-    label.innerText = Dictionary.get('a11y.tabList');
+    label.innerText = this.dictionary.get('a11y.tabList');
     dom.appendChild(label);
 
     const tabs = document.createElement('div');
@@ -265,7 +266,7 @@ export default class Tabs extends H5P.EventDispatcher {
    */
   getContext() {
     return {
-      type: Dictionary.get('l10n.tab'),
+      type: this.dictionary.get('l10n.tab'),
       value: this.activeTab + 1
     };
   }
