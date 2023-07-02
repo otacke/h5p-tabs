@@ -3,14 +3,12 @@ import '@styles/color_overrides.scss';
 
 /**
  * Color class.
- *
  * @class
  */
 export default class Colors {
 
   /**
    * Set new base color.
-   *
    * @param {string} color RGB color code in hex: #rrggbb.
    */
   static setBase(color) {
@@ -24,9 +22,8 @@ export default class Colors {
 
   /**
    * Get color.
-   *
    * @param {Color} color Base color.
-   * @param {object} [params={}] Parameters.
+   * @param {object} [params] Parameters.
    * @param {number} [params.opacity] Opacity value assuming white background.
    * @returns {Color} Color with opacity figured in.
    */
@@ -57,7 +54,6 @@ export default class Colors {
 
   /**
    * Check whether color is default base color.
-   *
    * @param {string} color RGB color code in hex: #rrggbb.
    * @returns {boolean} True, if color is default base color, else false.
    */
@@ -67,7 +63,6 @@ export default class Colors {
 
   /**
    * Get CSS override for content type.
-   *
    * @param {string} machineName content types machine name.
    * @returns {string} CSS override for content type.
    */
@@ -83,7 +78,6 @@ export default class Colors {
    * Get CSS overrides.
    * Color values are set in SCSS including pseudo elements, so we need to
    * override CSS.
-   *
    * @returns {string} CSS overrides.
    */
   static getCSS() {

@@ -1,6 +1,7 @@
 {
   "globals": {
     "H5P": "readonly",
+    "H5PEditor": "readonly",
     "H5PIntegration": "readonly"
   },
   "env": {
@@ -34,7 +35,9 @@
     "no-extra-boolean-cast": "off",
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "arrow-parens": ["error", "always"],
-    "quotes": ["error", "single"]
+    "quotes": ["error", "single"],
+    "object-curly-spacing": ["error", "always"],
+    "no-alert": ["error"]
   },
   "plugins": ["jsdoc"],
   "settings": {

@@ -4,8 +4,8 @@ import './tab.scss';
 export default class Tab {
   /**
    * @class
-   * @param {object} [params={}] Parameters.
-   * @param {object} [callbacks={}] Callbacks.
+   * @param {object} [params] Parameters.
+   * @param {object} [callbacks] Callbacks.
    */
   constructor(params = {}, callbacks = {}) {
     this.params = params;
@@ -35,7 +35,6 @@ export default class Tab {
 
   /**
    * Return DOM for component..
-   *
    * @returns {HTMLElement} DOM for component.
    */
   getDOM() {
@@ -69,7 +68,6 @@ export default class Tab {
 
   /**
    * Handle key down.
-   *
    * @param {KeyboardEvent} event Keyboard event.
    */
   handleKeyDown(event) {

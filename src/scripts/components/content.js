@@ -4,8 +4,8 @@ import './content.scss';
 export default class Content {
   /**
    * @class
-   * @param {object} [params={}] Parameters.
-   * @param {object} [callbacks={}] Callbacks.
+   * @param {object} [params] Parameters.
+   * @param {object} [callbacks] Callbacks.
    * @param {function} [callbacks.onInstantiated] On instantiated callback.
    */
   constructor(params = {}, callbacks = {}) {
@@ -63,7 +63,6 @@ export default class Content {
 
   /**
    * Return DOM for component..
-   *
    * @returns {HTMLElement} DOM for component.
    */
   getDOM() {
@@ -72,7 +71,6 @@ export default class Content {
 
   /**
    * Get H5P instance.
-   *
    * @returns {H5P.ContentType} H5P instance.
    */
   getInstance() {
@@ -95,7 +93,6 @@ export default class Content {
 
   /**
    * Set content to done or not done.
-   *
    * @param {boolean} state Done state.
    */
   setDoneState(state) {
@@ -108,7 +105,6 @@ export default class Content {
 
   /**
    * Check whether content is done.
-   *
    * @returns {boolean} True, if sone. Else false.
    */
   getDoneState() {

@@ -3,37 +3,25 @@
   color: var(--color-tab-override-base, #356593);
 }
 
-button {
-  &.h5p-core-button {
-    background: var(--color-tab-override-base, #2579c6);
+// Joubel-UI
+.h5p-joubelui-button {
+  background: var(--color-tab-override-base, #1a73d9);
+  color: var(--color-tab-override-text, #fff);
+
+  &:hover,
+  &:focus {
+    background: var(--color-tab-override-hover-focus, #1356a3);
     color: var(--color-tab-override-text, #fff);
+  }
 
-    &:link,
-    &:visited {
-      background: var(--color-tab-override-base, #2579c6);
-      color: var(--color-tab-override-text, #fff);
-    }
-
-    &:hover {
-      background: var(--color-tab-override-hover-focus, rgba(31, 103, 168, 0.83));
-      color: var(--color-tab-override-text, #fff);
-    }
-
-    &:focus {
-      background: var(--color-tab-override-hover-focus, #1f67a8);
-      color: var(--color-tab-override-text, #fff);
-    }
-
-    &:active {
-      background: var(--color-tab-override-active, #104888);
-      color: var(--color-tab-override-text, #fff);
-    }
+  &:active {
+    background: var(--color-tab-override-active, #104888);
+    box-shadow: inset 0 4px 0 var(--color-tab-override-shadow-light, #0e407a);
+    color: var(--color-tab-override-text, #fff);
   }
 }
 
-// Joubel-UI
-.h5peditor .ui-dialog .h5p-joubelui-button,
-.h5p-joubelui-button {
+.h5peditor .ui-dialog .h5p-joubelui-button {
   background: var(--color-tab-override-base, #1a73d9);
   color: var(--color-tab-override-text, #fff);
 
@@ -303,6 +291,34 @@ button {
 
     .line .event-line {
       background: var(--color-tab-override-base, #08c) !important;
+    }
+  }
+}
+
+button {
+  &.h5p-core-button {
+    background: var(--color-tab-override-base, #2579c6);
+    color: var(--color-tab-override-text, #fff);
+
+    &:link,
+    &:visited {
+      background: var(--color-tab-override-base, #2579c6);
+      color: var(--color-tab-override-text, #fff);
+    }
+
+    &:hover {
+      background: var(--color-tab-override-hover-focus, rgba(31, 103, 168, 0.83));
+      color: var(--color-tab-override-text, #fff);
+    }
+
+    &:focus {
+      background: var(--color-tab-override-hover-focus, #1f67a8);
+      color: var(--color-tab-override-text, #fff);
+    }
+
+    &:active {
+      background: var(--color-tab-override-active, #104888);
+      color: var(--color-tab-override-text, #fff);
     }
   }
 }

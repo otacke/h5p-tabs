@@ -30,11 +30,6 @@
     }
   }
 
-  &:not(.active):hover {
-    background-color: var(--color-tab-background-hover, $color-tab-hover);
-    color: var(--color-tab-text-hover, $color-text);
-  }
-
   &:first-child {
     border-top-left-radius: 1em;
   }
@@ -45,5 +40,10 @@
 
   &:not(:last-child) {
     border-right: solid 1px var(--color-tab-background-hover, $color-content);
+  }
+
+  &:not(.active):hover {
+    background-color: var(--color-tab-background-hover, $color-tab-hover);
+    color: var(--color-tab-text-hover, $color-text);
   }
 }
