@@ -120,7 +120,7 @@
     "common": true,
     "fields": [
       {
-        "name": "tabLsist",
+        "name": "tabList",
         "type": "text",
         "label": "Choose a tab",
         "description": "Text for screenreaders.",
