@@ -147,7 +147,7 @@ export default class Tabs extends H5P.EventDispatcher {
         const tab = new Tab(
           {
             id: index,
-            label: tabParams.metadata?.title || `Tab ${index}`,
+            label: Util.purifyHTML(tabParams.metadata?.title || `Tab ${index}`),
             uuid: uuid
           },
           {

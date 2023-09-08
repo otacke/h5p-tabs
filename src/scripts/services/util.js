@@ -1,3 +1,5 @@
+import { decode } from 'he';
+
 export default class Util {
   /**
    * Extend an array just like JQuery's extend.
@@ -28,6 +30,19 @@ export default class Util {
     const div = document.createElement('div');
     div.innerHTML = html;
     return div.textContent || div.innerText || '';
+  }
+
+  /**
+   * HTML decode and strip HTML.
+   * @param {string|object} html html.
+   * @returns {string} html value.
+   */
+  static purifyHTML(html) {
+    if (typeof html !== 'string') {
+      return '';
+    }
+
+    return Util.stripHTML(decode(html));
   }
 
   /**
