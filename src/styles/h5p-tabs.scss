@@ -1,4 +1,12 @@
-@import "./main";
+@import "@styles/main";
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 .h5p-tabs {
   background-color: var(--color-background);
@@ -12,7 +20,6 @@
     &.h5p-tabs-message {
       background-color: $color-hint-message-background;
       border: 1px solid $color-hint-message-border;
-      box-sizing: border-box;
       color: $color-hint-message-text;
       margin: 0;
       padding: .8em;
