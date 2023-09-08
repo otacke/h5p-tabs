@@ -20,6 +20,7 @@
   ],
   "author": "Oliver Tacke",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "@babel/cli": "^7.22.15",
     "@babel/core": "^7.22.15",
@@ -42,5 +43,6 @@
   "dependencies": {
     "color": "^4.2.3",
     "he": "^1.2.0"
-  }
+  },
+  "browserslist": "> 0.5%, last 3 versions, Firefox ESR, not dead"
 }

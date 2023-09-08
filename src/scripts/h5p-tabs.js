@@ -1,8 +1,8 @@
 import Colors from '@services/colors';
-import Dictionary from '@services/dictionary';
-import Util from '@services/util';
-import Content from '@components/content';
-import Tab from '@components/tab';
+import Dictionary from '@services/dictionary.js';
+import Util from '@services/util.js';
+import Content from '@components/content.js';
+import Tab from '@components/tab.js';
 import '@styles/h5p-tabs.scss';
 
 export default class Tabs extends H5P.EventDispatcher {
