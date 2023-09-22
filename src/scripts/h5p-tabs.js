@@ -247,9 +247,13 @@ export default class Tabs extends H5P.EventDispatcher {
 
   /**
    * Get current state.
-   * @returns {object} Current state.
+   * @returns {object|undefined} Current state.
    */
   getCurrentState() {
+    if (!this.getAnswerGiven() && this.activeTab === 0) {
+      return;
+    }
+
     return {
       activeTab: this.activeTab,
       doneTabs: this.contents.map((content) => content.getDoneState()),
