@@ -247,9 +247,14 @@ export default class Tabs extends H5P.EventDispatcher {
 
   /**
    * Get current state.
-   * @returns {object} Current state.
+   * @returns {object|undefined} Current state.
    */
   getCurrentState() {
+    if (!this.getAnswerGiven()) {
+      // Ensure previous state is cleared in DB after reset
+      return this.wasReset ? {} : undefined;
+    }
+
     return {
       activeTab: this.activeTab,
       doneTabs: this.contents.map((content) => content.getDoneState()),
@@ -362,6 +367,8 @@ export default class Tabs extends H5P.EventDispatcher {
    */
   resetTask() {
     this.activate(0);
+
+    this.wasReset = true;
 
     this.contents.forEach((content) => {
       content.setDoneState(content.getInstance().getMaxScore() === 0);
