@@ -37,13 +37,13 @@
           "description": "Apibrėžkite, kiek procentų skirtukų skydelio horizontalios erdvės bus naudojama skirtukams."
         },
         {
-          "label": "Fono spalva",
-          "description": "Leidžia reguliuoti fono spalvą, kad skirtukai galėtų susilieti su aplinka.",
+          "label": "Skirtuko spalva",
+          "description": "Leidžia reguliuoti skirtukų spalvą.",
           "default": "#1a73d9"
         },
         {
-          "label": "Background color",
-          "description": "Allows you to adjust the background color so the tabs may blend into your environment.",
+          "label": "Fono spalva",
+          "description": "Leidžia reguliuoti fono spalvą, kad skirtukai galėtų susilieti su aplinka.",
           "default": "rgba(255, 255, 255, 0)"
         }
       ]
