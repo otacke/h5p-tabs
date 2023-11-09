@@ -39,19 +39,18 @@ export default class Content {
       window.requestIdleCallback :
       window.requestAnimationFrame;
 
+    this.instance = H5P.newRunnable(
+      this.params.content,
+      this.params.contentId,
+      H5P.jQuery(this.content),
+      false,
+      { previousState: this.params.previousState }
+    );
+
     initCallback(() => {
       const observer = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
           observer.disconnect(); // Not needed anymore
-
-          this.instance = H5P.newRunnable(
-            this.params.content,
-            this.params.contentId,
-            H5P.jQuery(this.content),
-            false,
-            { previousState: this.params.previousState }
-          );
-
           this.callbacks.onInstantiated();
         }
       }, {
