@@ -68,7 +68,8 @@
           "label": "Pasirinkite skirtuką",
           "description": "Tekstas ekrano skaitytuvams.",
           "default": "Pasirinkite skirtuką."
-        }
+        },
+        {}
       ]
     }
   ]
