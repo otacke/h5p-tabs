@@ -1,0 +1,69 @@
+{
+  "semantics": [
+    {
+      "label": "Tabbladen",
+      "entity": "tabblad",
+      "widgets": [
+        {
+          "label": "Standaard"
+        }
+      ],
+      "field": {
+        "label": "Inhoud",
+        "entity": "inhoud"
+      }
+    },
+    {
+      "label": "Gedragsinstellingen",
+      "description": "Met deze opties kun je bepalen hoe de taak zich gedraagt.",
+      "fields": [
+        {
+          "label": "Tabblad plaatsen",
+          "description": "Kies waar de tabbladen worden geplaatst.",
+          "options": [
+            {
+              "label": "Gebaseerd op de schermgrootte"
+            },
+            {
+              "label": "Boven de inhoud"
+            },
+            {
+              "label": "Links van de inhoud"
+            }
+          ]
+        },
+        {
+          "label": "Tabblad verspreiden",
+          "description": "Definieer welk percentage van de horizontale ruimte van het tabbladpaneel wordt gebruikt voor de tabbladen."
+        },
+        {
+          "label": "Achtergrondkleur",
+          "description": "Hiermee kun je de achtergrondkleur aanpassen zodat de tabbladen matchen met de omgeving."
+        }
+      ]
+    },
+    {
+      "label": "User interface",
+      "fields": [
+        {
+          "label": "Tabblad",
+          "default": "tabblad"
+        },
+        {
+          "label": "Geen inhoud",
+          "default": "Er is geen inhoud om weer te geven."
+        }
+      ]
+    },
+    {
+      "label": "Toegankelijkheid teksten",
+      "fields": [
+        {
+          "label": "Kies een tabblad",
+          "description": "Tekst voor schermlezers.",
+          "default": "Kies een tabblad."
+        }
+      ]
+    }
+  ]
+}
