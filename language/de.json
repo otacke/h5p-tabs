@@ -38,13 +38,11 @@
         },
         {
           "label": "Tab-Farbe",
-          "description": "Erlaubt es dir, die Farbe der Tabs anzupassen.",
-          "default": "#1a73d9"
+          "description": "Erlaubt es dir, die Farbe der Tabs anzupassen."
         },
         {
           "label": "Hintergrundfarbe",
-          "description": "Erlaubt es dir, die Hintergrundfarbe so anzupassen, dass die Tabs sich in die Umgebung einpassen.",
-          "default": "rgba(255, 255, 255, 0)"
+          "description": "Erlaubt es dir, die Hintergrundfarbe so anzupassen, dass die Tabs sich in die Umgebung einpassen."
         }
       ]
     },

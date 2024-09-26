@@ -38,13 +38,11 @@
         },
         {
           "label": "Skirtuko spalva",
-          "description": "Leidžia reguliuoti skirtukų spalvą.",
-          "default": "#1a73d9"
+          "description": "Leidžia reguliuoti skirtukų spalvą."
         },
         {
           "label": "Fono spalva",
-          "description": "Leidžia reguliuoti fono spalvą, kad skirtukai galėtų susilieti su aplinka.",
-          "default": "rgba(255, 255, 255, 0)"
+          "description": "Leidžia reguliuoti fono spalvą, kad skirtukai galėtų susilieti su aplinka."
         }
       ]
     },

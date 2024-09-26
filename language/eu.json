@@ -38,13 +38,11 @@
         },
         {
           "label": "Fitxen kolorea",
-          "description": "Fitxen kolorea doitzeko aukera ematen du.",
-          "default": "#1a73d9"
+          "description": "Fitxen kolorea doitzeko aukera ematen du."
         },
         {
           "label": "Atzeko planoaren kolorea",
-          "description": "Atzeko planoaren kolorea doitzeko aukera ematen du, fitxak zure ingurunean nahas daitezen.",
-          "default": "rgba(255, 255, 255, 0)"
+          "description": "Atzeko planoaren kolorea doitzeko aukera ematen du, fitxak zure ingurunean nahas daitezen."
         }
       ]
     },

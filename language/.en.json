@@ -38,13 +38,11 @@
         },
         {
           "label": "Tab color",
-          "description": "Allows you to adjust the color of tabs.",
-          "default": "#1a73d9"
+          "description": "Allows you to adjust the color of tabs."
         },
         {
           "label": "Background color",
-          "description": "Allows you to adjust the background color so the tabs may blend into your environment.",
-          "default": "rgba(255, 255, 255, 0)"
+          "description": "Allows you to adjust the background color so the tabs may blend into your environment."
         }
       ]
     },

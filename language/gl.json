@@ -38,13 +38,11 @@
         },
         {
           "label": "Cor da lapela",
-          "description": "Permítelle axustar a cor das lapelas.",
-          "default": "#1a73d9"
+          "description": "Permítelle axustar a cor das lapelas."
         },
         {
           "label": "Color do fondo",
-          "description": "Permíteche axustar a cor de fondo para que as lapelas poidan combinarse co teu ambiente.",
-          "default": "rgba(255, 255, 255, 0)"
+          "description": "Permíteche axustar a cor de fondo para que as lapelas poidan combinarse co teu ambiente."
         }
       ]
     },
