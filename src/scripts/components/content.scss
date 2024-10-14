@@ -1,7 +1,7 @@
-@import "@styles/main";
+@use "@styles/main";
 
 .h5p-tabs-content-container {
-  border: solid 1px var(--color-tab-background, $color-content);
+  border: solid 1px var(--color-tab-background, main.$color-content);
   height: 100%;
   width: 100%;
 
@@ -10,6 +10,6 @@
   }
 
   .h5p-tabs-tab-content {
-    background-color: $color-background;
+    background-color: main.$color-background;
   }
 }

@@ -1,9 +1,9 @@
-@import "@styles/main";
+@use "@styles/main";
 
 .h5p-tabs-button {
-  background-color: var(--color-tab-background, $color-tab);
+  background-color: var(--color-tab-background, main.$color-tab);
   border: none;
-  color: var(--color-tab-text, $color-text);
+  color: var(--color-tab-text, main.$color-text);
   cursor: pointer;
   font-size: 1em;
   flex-shrink: 1;
@@ -20,12 +20,12 @@
   }
 
   &.active {
-    background-color: var(--color-tab-background-active, $color-joubelui-button);
-    color: var(--color-tab-text-active, $color-background);
+    background-color: var(--color-tab-background-active, main.$color-joubelui-button);
+    color: var(--color-tab-text-active, main.$color-background);
 
     &:hover {
-      background-color: var(--color-tab-background-active-hover, $color-joubelui-button);
-      color: var(--color-tab-text-active-hover, $color-background);
+      background-color: var(--color-tab-background-active-hover, main.$color-joubelui-button);
+      color: var(--color-tab-text-active-hover, main.$color-background);
     }
   }
 
@@ -38,11 +38,11 @@
   }
 
   &:not(:last-child) {
-    border-right: solid 1px var(--color-tab-background-hover, $color-content);
+    border-right: solid 1px var(--color-tab-background-hover, main.$color-content);
   }
 
   &:not(.active):hover {
-    background-color: var(--color-tab-background-hover, $color-tab-hover);
-    color: var(--color-tab-text-hover, $color-text);
+    background-color: var(--color-tab-background-hover, main.$color-tab-hover);
+    color: var(--color-tab-text-hover, main.$color-text);
   }
 }

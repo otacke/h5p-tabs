@@ -1,4 +1,4 @@
-@import "@styles/main";
+@use "@styles/main";
 
 .h5p-tabs {
   background-color: var(--color-background);
@@ -10,9 +10,9 @@
     flex-direction: column;
 
     &.h5p-tabs-message {
-      background-color: $color-hint-message-background;
-      border: 1px solid $color-hint-message-border;
-      color: $color-hint-message-text;
+      background-color: main.$color-hint-message-background;
+      border: 1px solid main.$color-hint-message-border;
+      color: main.$color-hint-message-text;
       margin: 0;
       padding: .8em;
       text-align: center;
@@ -20,7 +20,7 @@
 
     .h5p-tabs-tabs-label {
       position: absolute;
-      left: $offset-offscreen;
+      left: main.$offset-offscreen;
     }
 
     .h5p-tabs-tabs {
@@ -52,7 +52,7 @@
 
         &:not(:last-child) {
           border-right: 0;
-          border-bottom: solid 1px var(--color-tab-background-hover, $color-content);;
+          border-bottom: solid 1px var(--color-tab-background-hover, main.$color-content);;
         }
 
         &:last-child {
@@ -81,7 +81,7 @@
 
           &:not(:last-child) {
             border-right: 0;
-            border-bottom: solid 1px var(--color-tab-background-hover, $color-content);
+            border-bottom: solid 1px var(--color-tab-background-hover, main.$color-content);
           }
 
           &:last-child {
