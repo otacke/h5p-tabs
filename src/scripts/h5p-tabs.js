@@ -387,7 +387,7 @@ export default class Tabs extends H5P.EventDispatcher {
     const xAPIEvent = this.createXAPIEvent('answered');
 
     // Not a valid xAPI value (!), but H5P uses it for reporting
-    xAPIEvent.data.statement.definition.interactionType = 'compound';
+    xAPIEvent.data.statement.object.definition.interactionType = 'compound';
 
     xAPIEvent.setScoredResult(this.getScore(),
       this.getMaxScore(),
@@ -411,7 +411,8 @@ export default class Tabs extends H5P.EventDispatcher {
     const xAPIEvent = this.createXAPIEventTemplate(verb);
     Util.extend(
       xAPIEvent.getVerifiedStatementValue(['object', 'definition']),
-      this.getXAPIDefinition());
+      this.getXAPIDefinition()
+    );
 
     return xAPIEvent;
   }
