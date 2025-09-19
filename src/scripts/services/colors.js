@@ -1,6 +1,12 @@
 import Color from 'color';
 import '@styles/color_overrides.scss';
 
+/** @constant {number} LUMINOSITY_THRESHOLD Luminosity threshold for switching text color. */
+const LUMINOSITY_THRESHOLD = 0.5;
+
+/** @constant {number} DARKEN_FACTOR Factor by which to darken colors. */
+const DARKEN_FACTOR = 0.05;
+
 /**
  * Color class.
  * @class
@@ -48,7 +54,7 @@ export default class Colors {
     return Color.rgb(
       color.rgb().array().map((value, index) => {
         return params.opacity * value + (1 - params.opacity) * rgbBackground[index];
-      })
+      }),
     );
   }
 
@@ -82,27 +88,27 @@ export default class Colors {
    */
   static getCSS() {
     const colorBackgroundActive = Colors.colorBase;
-    const colorTextActive = (Colors.colorBase.luminosity() > .5) ?
+    const colorTextActive = (Colors.colorBase.luminosity() > LUMINOSITY_THRESHOLD) ?
       Colors.DEFAULT_COLOR_TEXT_DARK :
       Colors.DEFAULT_COLOR_TEXT_LIGHT;
 
-    const colorBackgroundActiveHover = colorBackgroundActive.darken(0.05);
-    const colorTextActiveHover = (colorBackgroundActiveHover.luminosity() > .5) ?
+    const colorBackgroundActiveHover = colorBackgroundActive.darken(DARKEN_FACTOR);
+    const colorTextActiveHover = (colorBackgroundActiveHover.luminosity() > LUMINOSITY_THRESHOLD) ?
       Colors.DEFAULT_COLOR_TEXT_DARK :
       Colors.DEFAULT_COLOR_TEXT_LIGHT;
 
     const colorBackground = Colors.getColor(Colors.colorBase, { opacity: .2 });
-    const colorText = (colorBackground.luminosity() > .5) ?
+    const colorText = (colorBackground.luminosity() > LUMINOSITY_THRESHOLD) ?
       Colors.DEFAULT_COLOR_TEXT_DARK :
       Colors.DEFAULT_COLOR_TEXT_LIGHT;
 
-    const colorBackgroundHover = colorBackground.darken(0.05);
-    const colorTextHover = (colorBackgroundHover.luminosity() > .5) ?
+    const colorBackgroundHover = colorBackground.darken(DARKEN_FACTOR);
+    const colorTextHover = (colorBackgroundHover.luminosity() > LUMINOSITY_THRESHOLD) ?
       Colors.DEFAULT_COLOR_TEXT_DARK :
       Colors.DEFAULT_COLOR_TEXT_LIGHT;
 
     const colorOverrideBase = colorBackgroundActive;
-    const colorOverrideText = (colorOverrideBase.luminosity() > .5) ?
+    const colorOverrideText = (colorOverrideBase.luminosity() > LUMINOSITY_THRESHOLD) ?
       Colors.DEFAULT_COLOR_TEXT_DARK :
       Colors.DEFAULT_COLOR_TEXT_LIGHT;
 

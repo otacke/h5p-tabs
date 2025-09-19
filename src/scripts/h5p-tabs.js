@@ -22,15 +22,15 @@ export default class Tabs extends H5P.EventDispatcher {
         tabPlacement: 'dynamic',
         tabSpread: 70,
         colorBase: '#1a73d9',
-        colorBackground: 'rgba(255, 255, 255, 0)'
+        colorBackground: 'rgba(255, 255, 255, 0)',
       },
       l10n: {
         tab: 'tab',
-        noContent: 'There is no content to be displayed.'
+        noContent: 'There is no content to be displayed.',
       },
       a11y: {
-        tabList: 'Choose a tab.'
-      }
+        tabList: 'Choose a tab.',
+      },
     }, params);
 
     this.contentId = contentId;
@@ -59,7 +59,7 @@ export default class Tabs extends H5P.EventDispatcher {
     this.previousState = Util.extend({
       activeTab: 0,
       doneTabs: Array.from(Array(this.params.tabs.length)),
-      contents: Array.from(Array(this.params.tabs.length))
+      contents: Array.from(Array(this.params.tabs.length)),
     }, extras?.previousState || {});
 
     const defaultLanguage = extras?.metadata?.defaultLanguage || 'en';
@@ -113,13 +113,13 @@ export default class Tabs extends H5P.EventDispatcher {
             content: tabParams,
             contentId: this.contentId,
             uuid: uuid,
-            previousState: this.previousState.contents[index]
+            previousState: this.previousState.contents[index],
           },
           {
             onInstantiated: () => {
               content.setDoneState(
                 this.previousState.doneTabs[index] ||
-                content.getInstance().getMaxScore() === 0
+                content.getInstance().getMaxScore() === 0,
               );
 
               content.getInstance().on('xAPI', (event) => {
@@ -130,7 +130,7 @@ export default class Tabs extends H5P.EventDispatcher {
               this.bubbleDown(
                 this,
                 'resize',
-                [content.getInstance()]
+                [content.getInstance()],
               );
 
               this.bubbleUp(content.getInstance(), 'resize', this);
@@ -138,8 +138,8 @@ export default class Tabs extends H5P.EventDispatcher {
               window.requestAnimationFrame(() => {
                 this.trigger('resize');
               });
-            }
-          }
+            },
+          },
         );
 
         this.contents.push(content);
@@ -148,7 +148,7 @@ export default class Tabs extends H5P.EventDispatcher {
           {
             id: index,
             label: Util.purifyHTML(tabParams.metadata?.title || `Tab ${index}`),
-            uuid: uuid
+            uuid: uuid,
           },
           {
             onClicked: (id) => {
@@ -156,8 +156,8 @@ export default class Tabs extends H5P.EventDispatcher {
             },
             onMove: (code) => {
               this.moveFocus(code);
-            }
-          }
+            },
+          },
         );
         this.tabs.push(tab);
       })
@@ -233,7 +233,7 @@ export default class Tabs extends H5P.EventDispatcher {
    */
   getTitle() {
     return H5P.createTitle(
-      this.extras?.metadata?.title || Tabs.DEFAULT_DESCRIPTION
+      this.extras?.metadata?.title || Tabs.DEFAULT_DESCRIPTION,
     );
   }
 
@@ -260,7 +260,7 @@ export default class Tabs extends H5P.EventDispatcher {
       doneTabs: this.contents.map((content) => content.getDoneState()),
       contents: this.contents.map((content) => {
         return content.getInstance().getCurrentState();
-      })
+      }),
     };
   }
 
@@ -272,7 +272,7 @@ export default class Tabs extends H5P.EventDispatcher {
   getContext() {
     return {
       type: this.dictionary.get('l10n.tab'),
-      value: this.activeTab + 1
+      value: this.activeTab + 1,
     };
   }
 
@@ -308,7 +308,7 @@ export default class Tabs extends H5P.EventDispatcher {
         this.getMaxScore(),
         this,
         true,
-        this.getScore() === this.getMaxScore()
+        this.getScore() === this.getMaxScore(),
       );
 
       this.trigger(xAPIEvent);
@@ -323,7 +323,7 @@ export default class Tabs extends H5P.EventDispatcher {
    */
   getAnswerGiven() {
     return this.contents.some((content) =>
-      content.getInstance().getAnswerGiven?.() || false
+      content.getInstance().getAnswerGiven?.() || false,
     );
   }
 
@@ -393,12 +393,12 @@ export default class Tabs extends H5P.EventDispatcher {
       this.getMaxScore(),
       this,
       true,
-      this.getScore() === this.getMaxScore()
+      this.getScore() === this.getMaxScore(),
     );
 
     return {
       statement: xAPIEvent.data.statement,
-      children: this.getXAPIDataFromChildren(this.contents)
+      children: this.getXAPIDataFromChildren(this.contents),
     };
   }
 
@@ -411,7 +411,7 @@ export default class Tabs extends H5P.EventDispatcher {
     const xAPIEvent = this.createXAPIEventTemplate(verb);
     Util.extend(
       xAPIEvent.getVerifiedStatementValue(['object', 'definition']),
-      this.getXAPIDefinition()
+      this.getXAPIDefinition(),
     );
 
     return xAPIEvent;
@@ -510,6 +510,7 @@ export default class Tabs extends H5P.EventDispatcher {
         id = 0;
       }
       else if (id === Tab.LAST) {
+        // eslint-disable-next-line no-magic-numbers
         id = (2 * this.tabs.length - 1) % this.tabs.length;
       }
     }

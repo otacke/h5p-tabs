@@ -12,7 +12,7 @@ export default class Content {
     this.params = params;
 
     this.callbacks = Util.extend({
-      onInstantiated: () => {}
+      onInstantiated: () => {},
     }, callbacks);
 
     this.dom = document.createElement('div');
@@ -20,7 +20,7 @@ export default class Content {
     this.dom.setAttribute('id', `h5p-tabs-tabpanel-${this.params.uuid}`);
     this.dom.setAttribute('role', 'tabpanel');
     this.dom.setAttribute(
-      'aria-labelledby', `h5p-tabs-tab-${this.params.uuid}`
+      'aria-labelledby', `h5p-tabs-tab-${this.params.uuid}`,
     );
 
     this.content = document.createElement('div');
@@ -44,7 +44,7 @@ export default class Content {
       this.params.contentId,
       H5P.jQuery(this.content),
       false,
-      { previousState: this.params.previousState }
+      { previousState: this.params.previousState },
     );
 
     initCallback(() => {
@@ -54,7 +54,7 @@ export default class Content {
           this.callbacks.onInstantiated();
         }
       }, {
-        threshold: 0.01
+        threshold: 0.01,
       });
       observer.observe(this.dom);
     });

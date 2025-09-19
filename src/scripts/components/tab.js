@@ -12,7 +12,7 @@ export default class Tab {
 
     this.callbacks = Util.extend({
       onClicked: () => {},
-      onMove: () => {}
+      onMove: () => {},
     }, callbacks);
 
     // Create DOM.
