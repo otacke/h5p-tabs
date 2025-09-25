@@ -9,7 +9,7 @@
   "runnable": 1,
   "fullscreen": 0,
   "machineName": "H5P.Tabs",
-  "author": "Joubel",
+  "author": "Oliver Tacke",
   "coreApi": {
     "majorVersion": 1,
     "minorVersion": 27
