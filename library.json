@@ -2,7 +2,7 @@
   "title": "Tabs",
   "majorVersion": 1,
   "minorVersion": 2,
-  "patchVersion": 0,
+  "patchVersion": 1,
   "embedTypes": [
     "iframe"
   ],
