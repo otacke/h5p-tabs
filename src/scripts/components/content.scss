@@ -2,6 +2,7 @@
 
 .h5p-tabs-content-container {
   border: solid 1px var(--color-tab-background, main.$color-content);
+  box-sizing: border-box;
   height: 100%;
   width: 100%;
 
