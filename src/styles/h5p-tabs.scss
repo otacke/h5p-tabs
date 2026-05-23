@@ -55,7 +55,7 @@
 
         &:last-child {
           border-top-right-radius: 0;
-          border-bottom-left-radius: 1em;
+          border-bottom-left-radius: var(--h5p-theme-border-radius-large);
         }
       }
     }
@@ -70,7 +70,7 @@
       .h5p-tabs-tabs {
         flex-direction: column;
         flex-shrink: 1;
-        max-width: 10em;
+        max-width: calc(10 * var(--h5p-theme-spacing-xs));
 
         .h5p-tabs-button {
           flex-shrink: 1;
@@ -84,7 +84,7 @@
 
           &:last-child {
             border-top-right-radius: 0;
-            border-bottom-left-radius: 1em;
+            border-bottom-left-radius: var(--h5p-theme-spacing-xs);
           }
         }
       }
