@@ -19,7 +19,7 @@
       "importance": "medium",
       "entity": "content",
       "options": [
-        "H5P.Column 1.18"
+        "H5P.Column 1.21"
       ],
       "widget": "editorTabs"
     }
@@ -60,36 +60,6 @@
         "default": 70,
         "min": 50,
         "max": 100
-      },
-      {
-        "name": "colorBase",
-        "type": "text",
-        "label": "Tab color",
-        "description": "Allows you to adjust the color of tabs.",
-        "importance": "medium",
-        "optional": true,
-        "default": "#1a73d9",
-        "widget": "colorSelector",
-        "spectrum": {
-          "showInput": true,
-          "showInitial": true,
-          "showAlpha": true
-        }
-      },
-      {
-        "name": "colorBackground",
-        "type": "text",
-        "label": "Background color",
-        "description": "Allows you to adjust the background color so the tabs may blend into your environment.",
-        "importance": "medium",
-        "optional": true,
-        "default": "rgba(255, 255, 255, 0)",
-        "widget": "colorSelector",
-        "spectrum": {
-          "showInput": true,
-          "showInitial": true,
-          "showAlpha": true
-        }
       }
     ]
   },

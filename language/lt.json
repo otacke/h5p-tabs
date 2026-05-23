@@ -35,14 +35,6 @@
         {
           "label": "Skirtukų pasiskirstymas",
           "description": "Apibrėžkite, kiek procentų skirtukų skydelio horizontalios erdvės bus naudojama skirtukams."
-        },
-        {
-          "label": "Skirtuko spalva",
-          "description": "Leidžia reguliuoti skirtukų spalvą."
-        },
-        {
-          "label": "Fono spalva",
-          "description": "Leidžia reguliuoti fono spalvą, kad skirtukai galėtų susilieti su aplinka."
         }
       ]
     },

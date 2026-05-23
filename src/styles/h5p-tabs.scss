@@ -1,7 +1,5 @@
-@use "@styles/main";
-
 .h5p-tabs {
-  background-color: var(--color-background);
+  background-color: var(--h5p-theme-ui-base);
   width: 100%;
   overflow: hidden;
 
@@ -10,17 +8,17 @@
     flex-direction: column;
 
     &.h5p-tabs-message {
-      background-color: main.$color-hint-message-background;
-      border: 1px solid main.$color-hint-message-border;
-      color: main.$color-hint-message-text;
+      background-color: var(--h5p-theme-feedback-neutral-third);
+      border: 1px solid var(--h5p-theme-feedback-neutral-main);
+      color: var(--h5p-theme-feedback-neutral-secondary);
       margin: 0;
-      padding: .8em;
+      padding: var(--h5p-theme-spacing-xs);
       text-align: center;
     }
 
     .h5p-tabs-tabs-label {
       position: absolute;
-      left: main.$offset-offscreen;
+      left: -999999px;
     }
 
     .h5p-tabs-tabs {
@@ -42,7 +40,7 @@
     .h5p-tabs-tabs {
       flex-direction: column;
       flex-shrink: 1;
-      max-width: 20em;
+      max-width: calc(20 * var(--h5p-theme-spacing-xs));
       width: auto;
 
       .h5p-tabs-button {
@@ -52,7 +50,7 @@
 
         &:not(:last-child) {
           border-right: 0;
-          border-bottom: solid 1px var(--color-tab-background-hover, main.$color-content);;
+          border-bottom: solid 1px var(--h5p-theme-alternative-dark);
         }
 
         &:last-child {
@@ -81,7 +79,7 @@
 
           &:not(:last-child) {
             border-right: 0;
-            border-bottom: solid 1px var(--color-tab-background-hover, main.$color-content);
+            border-bottom: solid 1px var(--h5p-theme-main-cta-light);
           }
 
           &:last-child {

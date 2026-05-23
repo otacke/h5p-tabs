@@ -1,7 +1,5 @@
-@use "@styles/main";
-
 .h5p-tabs-content-container {
-  border: solid 1px var(--color-tab-background, main.$color-content);
+  border: solid 1px var(--h5p-theme-alternative-dark);
   box-sizing: border-box;
   height: 100%;
   width: 100%;
@@ -11,6 +9,6 @@
   }
 
   .h5p-tabs-tab-content {
-    background-color: main.$color-background;
+    background-color: var(--h5p-theme-ui-base);
   }
 }

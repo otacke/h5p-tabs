@@ -33,14 +33,6 @@
         {
           "label": "Distribución de las pestañas",
           "description": "Define qué porcentaje del espacio horizontal del panel de pestañas se utilizará para las pestañas."
-        },
-        {
-          "label": "Color de pestaña",
-          "description": "Permite ajustar el color de las pestañas."
-        },
-        {
-          "label": "Color del fondo",
-          "description": "Permite ajustar el color de fondo para que las pestañas se mezclen con su entorno."
         }
       ],
       "label": "Configuraciones del comportamiento",

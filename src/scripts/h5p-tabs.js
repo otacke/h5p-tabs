@@ -1,4 +1,3 @@
-import Colors from '@services/colors';
 import Dictionary from '@services/dictionary.js';
 import Util from '@services/util.js';
 import Content from '@components/content.js';
@@ -21,8 +20,6 @@ export default class Tabs extends H5P.EventDispatcher {
       behaviour: {
         tabPlacement: 'dynamic',
         tabSpread: 70,
-        colorBase: '#1a73d9',
-        colorBackground: 'rgba(255, 255, 255, 0)',
       },
       l10n: {
         tab: 'tab',
@@ -39,17 +36,6 @@ export default class Tabs extends H5P.EventDispatcher {
     // Fill dictionary
     this.dictionary = new Dictionary();
     this.dictionary.fill({ l10n: this.params.l10n, a11y: this.params.a11y });
-
-    // Apply dynamic color values
-    Colors.setBase(this.params.behaviour.colorBase);
-    const style = document.createElement('style');
-    if (style.styleSheet) {
-      style.styleSheet.cssText = Colors.getCSS();
-    }
-    else {
-      style.appendChild(document.createTextNode(Colors.getCSS()));
-    }
-    document.head.appendChild(style);
 
     // Sanitize params
     this.params.tabs = this.params.tabs.filter((tab) => {
@@ -213,7 +199,6 @@ export default class Tabs extends H5P.EventDispatcher {
    */
   setCustomCSS() {
     const css = `.h5p-tabs[id="${this.contentUUID}"]{\
-      --color-background: ${this.params.behaviour.colorBackground};\
       --tab-spread: ${this.params.behaviour.tabSpread}%;\
     }`;
 

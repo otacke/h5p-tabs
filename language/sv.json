@@ -35,14 +35,6 @@
         {
           "label": "Tab spread",
           "description": "Define what percentage of the tab panel's horizontal space will be used for tabs."
-        },
-        {
-          "label": "Tab color",
-          "description": "Allows you to adjust the color of tabs."
-        },
-        {
-          "label": "Background color",
-          "description": "Allows you to adjust the background color so the tabs may blend into your environment."
         }
       ]
     },

@@ -35,14 +35,6 @@
         {
           "label": "Distribución de lapelas",
           "description": "Define que porcentaxe do espazo horizontal do panel de lapelas se utilizará para as lapelas."
-        },
-        {
-          "label": "Cor da lapela",
-          "description": "Permítelle axustar a cor das lapelas."
-        },
-        {
-          "label": "Color do fondo",
-          "description": "Permíteche axustar a cor de fondo para que as lapelas poidan combinarse co teu ambiente."
         }
       ]
     },

@@ -35,14 +35,6 @@
         {
           "label": "Fitxen banaketa",
           "description": "Zehaztu fitxen paneleko espazio horizontalaren zein ehuneko erabiliko den fitxetarako."
-        },
-        {
-          "label": "Fitxen kolorea",
-          "description": "Fitxen kolorea doitzeko aukera ematen du."
-        },
-        {
-          "label": "Atzeko planoaren kolorea",
-          "description": "Atzeko planoaren kolorea doitzeko aukera ematen du, fitxak zure ingurunean nahas daitezen."
         }
       ]
     },
