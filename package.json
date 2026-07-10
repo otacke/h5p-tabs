@@ -1,6 +1,5 @@
 {
   "name": "h5p-tabs",
-  "version": "1.3.0",
   "description": "Tabs content type for H5P",
   "private": true,
   "scripts": {
